@@ -1,0 +1,15 @@
+{{ $img := .Page.Resources.GetMatch .Destination }}
+{{ if and (not $img) .Page.File }}
+{{ $path := path.Join .Page.File.Dir .Destination }}
+{{ $img = resources.Get $path }}
+{{ end }}
+{{ with $img }}
+{{ $tiny := $img.Resize "480x" }}
+{{ $small := $img.Resize "640x" }}
+{{ $medium := $img.Resize "960x" }}
+{{ $large := $img.Resize "1280x" }}
+<div class="figure mx-auto d-block">   
+    <img src="{{ $small.RelPermalink }}" srcset="{{ $tiny.RelPermalink }} 480w, {{ $small.RelPermalink }} 640w, {{ $medium.RelPermalink }} 960w, {{ $large.RelPermalink }} 1280w" width="{{$small.Width}}" height="{{$small.Height}}" sizes="(min-width: 992px) 640px, (min-width: 768px) 480px, calc(100vw - 1.5rem)" loading="lazy" alt="{{ $.Text }}" />
+    {{ with $.Title | safeHTML }}<p class="caption">{{ . }}</p>{{ end }}
+</div>
+{{ else }}<img src="{{ .Destination | safeURL }}" alt="{{ $.Text }}" />{{ end }}
