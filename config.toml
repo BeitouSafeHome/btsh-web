@@ -1,5 +1,5 @@
 baseurl = ""
-title = "北投社區安全家庭互助協會 Beitou Safe Home Association"
+title = "北投社區安全家庭互助方案 Beitou Safe Home"
 #author = ""
 languagecode = "zh-Hant-TW"
 paginate = 3
@@ -21,7 +21,7 @@ unsafe= true
 
 [params]
 pagetitle = "北投安家"
-copyright = "北投社區安全家庭互助協會"
+copyright = "北投社區安全家庭互助方案"
 copyrightUrl = "/contact/"
 faviconfile = "/img/favicon.png"
 logofile = "/img/btsh-logo.svg"
@@ -48,11 +48,11 @@ name = "故事"
 url = "/story/"
 weight = 2
 
-[[menu.primary]]
-identifier = "donate"
-name = "支持"
-url = "/donate/"
-weight = 3
+# [[menu.primary]]
+# identifier = "donate"
+# name = "支持"
+# url = "/donate/"
+# weight = 3
 
 [[menu.primary]]
 identifier = "contact"
