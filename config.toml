@@ -11,7 +11,7 @@ hasCJKLanguage = true
 enableRobotsTXT = true
 disableHugoGeneratorInject = true
 
-googleAnalytics = "UA-105725051-1"
+googleAnalytics = "G-S9KX0LR3DB"
 # disqusShortname = "your-disqus-shortname"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
